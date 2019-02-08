@@ -2,7 +2,7 @@
 
 - [Introduction](README.md)
 - [Installasi Android Studio dan Hello World](README.md)
-- [Hello World, Activity Lifecycle dan Layout](README.md)
+- [Hello World, Activity Lifecycle dan Layout](02.helloworld.md)
 - [Intent Pindah Activity, Recycler View](README.md)
 - [Master Detail Recycler View](README.md)
 - [Quiz](README.md)
