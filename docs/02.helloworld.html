@@ -321,6 +321,7 @@ Contohnya adalah ketika kita membuka aplikasi email di android, aplikasi ini bis
 <p>Aplikasi android yang dibuat biasanya minimal memiliki lebih dari satu layar tampilan, dimana untuk memfasilitasi behavior user pada aplikasi mobile yang sudah dijelaskan diatas maka untuk satu screen dibutuhkan satu activity. Sehingga pada umumnya sebuah aplikasi memiliki lebih dari satu activity.</p>
 <p><img src="images/02.activitycallback.png" alt="&apos;activitycallback&apos;"></p>
 <p>Berikut ini callback yang ada pada sebuah <code>Activity</code></p>
+<p><img src="images/02.activity_lifecycle.png" alt="&apos;activitylifecycleimage&apos;"></p>
 <table>
 <thead>
 <tr>
@@ -368,9 +369,35 @@ Contohnya adalah ketika kita membuka aplikasi email di android, aplikasi ini bis
 </tbody>
 </table>
 <h2 id="android-layout">Android Layout</h2>
+<p>Setiap activity akan mempunyai tampilan, untuk menyusun tampilan ada berbagai macam cara. Cara cara ini di himpun dalam sebuah tipe layout. Pada aplikasi android disediakan berbagai macam layout, untuk membuat sebuah tampilan yang digunakan oleh activity layout layout ini boleh digunakan sendiri sendiri atau digabung.</p>
+<p>Pada perkuliahan kali ini akan dijelaskan beberapa layout yang sering digunakan dalam pembuatan aplikasi android.</p>
 <h3 id="linear-layout">Linear Layout</h3>
+<p><img src="images/02.linearlayoutslide.png" alt="&apos;linearlayout&apos;"></p>
+<p>Linear layout adalah layout yang menyusun UI ke arah horizontal atau vertical sesuai orientasi yang diberikan kepada layout ini.</p>
+<p>Pada linear layout terdapat parameter wajib yaitu <code>orientation</code> yang mengatur orientasi dari sebuah linear layout apakah <code>vertical</code> atau <code>horizontal</code>. Semua child dari layout ini akan disusun mengikuti orientasi tersebut baik berupa tumpukan untuk orientasi <code>vertical</code> atau berbaris dari kiri ke kanan untuk orentasi <code>horizontal</code></p>
+<p><img src="images/02.linearlayoutex.png" alt="&apos;linearlayout&apos;"></p>
+<p>Pada contoh di atas merupakan kode xml untuk linear layout perhatikan lah beberapa attribut penting pada linear layout antara lain :</p>
+<ol>
+<li>orientation</li>
+<li>weight_sum</li>
+<li>leyout_weight </li>
+</ol>
 <h3 id="relative-layout">Relative Layout</h3>
+<p><img src="images/02.relativelayout.png" alt="&apos;relativelayout&apos;"></p>
+<p>Relative layout adalah layout yang menyusun UI dengan memposisikan item relative terhadap parent atau item lain. Pada relative layout sebuah item UI selalu memiliki informasi posisinya relative terhadap parent atau relative terhadap item lain jika tidak memiliki atribut posisi ini maka item tersebut akan di posisikan di pojok kiri atas atau posisi 0,0 dari layout.</p>
+<p><img src="images/02.relativelayoutcode-1.png" alt="&apos;relativelayout&apos;"></p>
+<p>Pada contoh diatas merupakan kode xml untuk relative layout, pada layout ini ada beberapa attribut yang perlu diperhatikan antara lain :</p>
+<ol>
+<li>layout_below</li>
+<li>layout_alignParentLeft</li>
+<li>layout_toLeftOf</li>
+<li>dll</li>
+</ol>
+<p>Pada umumnya attribut layout_xxx akan mengatur posisi relatif sebuah item pada layot.</p>
 <h3 id="constraint-layout">Constraint Layout</h3>
+<p><img src="images/02.constraintlayout.png" alt="&apos;constraint&apos;"></p>
+<p>Constraint layout merupakan layout yang memiliki kemiripan dengan Relative Layout namun mempunyai kelebihan dibandingkan dengan Relavite Layout dalam fleksibelitas dan kemudahan dalam membuat layout secara langsung melalui layout editor bawaan android studio.</p>
+<p>Constraint layout mampu membuat layout yang complex tanpa harus melakukan nested layout. Layout ini juga lebih mudah dalam penggunaan nya karena dapat dibuat dengan menggunakan fitur drag and drop pada layout editor android studio.</p>
 
                                 
                                 </section>
@@ -414,7 +441,7 @@ Contohnya adalah ketika kita membuka aplikasi email di android, aplikasi ini bis
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Hello World, Activity Lifecycle dan Layout","level":"1.3","depth":1,"next":{"title":"Intent Pindah Activity, Recycler View","level":"1.4","depth":1,"path":"README.md","ref":"README.md","articles":[]},"previous":{"title":"Installasi Android Studio dan Hello World","level":"1.2","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"02.helloworld.md","mtime":"2019-02-08T15:01:11.282Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-08T15:10:23.417Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Hello World, Activity Lifecycle dan Layout","level":"1.3","depth":1,"next":{"title":"Intent Pindah Activity, Recycler View","level":"1.4","depth":1,"path":"README.md","ref":"README.md","articles":[]},"previous":{"title":"Installasi Android Studio dan Hello World","level":"1.2","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"02.helloworld.md","mtime":"2019-02-09T13:19:01.864Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-09T13:19:45.320Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
