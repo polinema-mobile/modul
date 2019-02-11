@@ -14,3 +14,9 @@ _book
 *.epub
 *.mobi
 *.pdf
+
+# OSX junks
+.DS_Store
+
+# Docs
+docs/.gitignore
